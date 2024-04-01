@@ -1,0 +1,44 @@
+[
+    {
+        "title":"Here Comes The Sun",
+        "artist":"The Beatles",
+        "album":"Abbey Road",
+        "duration":"03:05",
+        "coverArt":"images/album1.jpeg"
+    },
+    {
+        "title":"花",
+        "artist":"Fujii Kaze",
+        "album":"Hana",
+        "duration":"04:06",
+        "coverArt":"images/album2.jpeg"
+    },
+    {
+        "title":"Jarim",
+        "artist":"Misty Terrace, Akira Nair",
+        "album":"Jarim",
+        "duration":"03:13",
+        "coverArt":"images/album3.jpeg"
+    },
+    {
+        "title":"có hẹn với thanh xuân",
+        "artist":"MONSTAR, GREY D",
+        "album":"Over The Moon",
+        "duration":"03:38",
+        "coverArt":"images/album4.jpeg"
+    },
+    {
+        "title":"Dynamite",
+        "artist":"BTS",
+        "album":"BE",
+        "duration":"03:19",
+        "coverArt":"images/album5.jpeg"
+    },
+    {
+        "title":"Mahiye Jinna Sohna",
+        "artist":"Darshan Raval",
+        "album":"Dard",
+        "duration":"03:01",
+        "coverArt":"images/album6.jpeg"
+    }
+]
