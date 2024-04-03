@@ -19,6 +19,7 @@ function PlaylistPreview(props: {songs: Song[], time: number}){
     return (
         <Box>
            <Heading margin={'30px'}>Your playlist</Heading>
+           <Text fontSize={'small'}>Number of songs: {props.songs.length}</Text>
            <Text fontSize={'small'}>Total duration: {TimeToText(props.time)}</Text>
            <Divider/>
            {/* <PlaylistSong title="Title" artist="Artist"/> */}
