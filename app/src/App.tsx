@@ -11,8 +11,10 @@ import PlaylistPreview from './components/PlaylistPreview';
 // });
 
 export interface Song {
+  id: number,
   title: string,
-  artist: string
+  artist: string,
+  duration: number
 }
 
 function App() {
@@ -33,8 +35,17 @@ function App() {
   };
 
   const updatePlaylist = (newSong: Song): void => {
-    const newList: Song[] = [...playlist, newSong];
-    setPlaylist(newList);
+    if (playlist.some(song => song.id === newSong.id)) {
+      const newList: Song[] = playlist.filter(song => song.id !== newSong.id);
+      setPlaylist(newList);
+      setTime(time - newSong.duration)
+    }
+    else{
+      const newList: Song[] = [...playlist, newSong];
+      setPlaylist(newList);
+      setTime(time + newSong.duration)
+    }
+    
   };
 
   const updateTime = (add: number): void => {
@@ -68,7 +79,7 @@ function App() {
       <div className="App">
         <header className="App-header">
           <HStack align={'baseline'} spacing={'30px'} marginTop={'50px'} width={'60%'}>
-            <Box width={'90%'}>
+            <Box width={'80%'}>
               {/* <Heading margin={'30px'}>Make a playlist!</Heading> */}
               <FilterBox addFilterFunc={addFilter} removeFilterFunc={removeFilter}
                 sliderVals={sliderValues}
@@ -89,11 +100,14 @@ function App() {
                   .map((item, index) => (
                     <SongCard
                       key={index}
+                      id={item.id}
                       title={item.title}
                       artist={item.artist}
                       album={item.album}
                       duration={item.duration}
                       coverArt={item.coverArt}
+                      altText={item.altText}
+                      playlist={playlist}
                       updatePlaylistFunc={updatePlaylist}
                       updateTimeFunc={updateTime}
                     />

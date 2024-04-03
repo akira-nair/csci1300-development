@@ -1,6 +1,7 @@
 import { Card, CardBody, Image, Text, Heading, Button, VStack, Box } from "@chakra-ui/react";
 
 import { Song } from "../App";
+import { useState } from "react";
 
 export function TimeToText(time: number): string {
     const minutes: number = Math.floor(time / 60);
@@ -12,11 +13,12 @@ export function TimeToText(time: number): string {
     return `${minutesStr}:${secondsStr}`;
   }
 
-function SongCard(props: { title: string, artist: string, album: string, duration: number, coverArt: string, updatePlaylistFunc: (newSong: Song)=>void , updateTimeFunc: (add: number)=>void }){
+function SongCard(props: { id: number, title: string, artist: string, album: string, duration: number, coverArt: string, altText: string, playlist: Song[], updatePlaylistFunc: (newSong: Song)=>void , updateTimeFunc: (add: number)=>void }){
+    const inPlaylist = props.playlist.some(song => song.id === props.id)
     return (
         <Card>
             <CardBody display={'flex'} justifyContent={'space-between'}>
-                <Image src={props.coverArt} width={40} height={40}></Image>
+                <Image src={props.coverArt} width={40} height={40} aria-label={props.altText}/>
                 <Box display={'flex'} flex={1} justifyContent={'space-between'}>
                     <VStack align={'stretch'} textAlign={'left'} padding={'5%'}>
                         <Heading fontSize={'large'}>{props.title}</Heading>
@@ -24,10 +26,16 @@ function SongCard(props: { title: string, artist: string, album: string, duratio
                         <Text fontSize={'small'}>{props.album}</Text>
                         <Text fontSize={'small'}>{TimeToText(props.duration)}</Text>
                     </VStack>
-                    <Button onClick={() => {
+                    <VStack>
+                    <Button color={inPlaylist ? "salmon" : "black"} onClick={() => {
+                        props.updatePlaylistFunc({id: props.id, title: props.title, artist: props.artist, duration: props.duration})
+                        // props.updateTimeFunc(props.duration)
+                    }}>{inPlaylist ? "Remove from Playlist" : "Add to Playlist"}</Button>
+                    {/* <Button onClick={() => {
                         props.updatePlaylistFunc({title: props.title, artist: props.artist})
                         props.updateTimeFunc(props.duration)
-                    }}>Add to Playlist</Button>
+                    }}>Remove from Playlist</Button> */}
+                    </VStack>
                 </Box>
             </CardBody>
         </Card>

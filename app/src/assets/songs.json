@@ -1,98 +1,122 @@
 [
     {
+        "id":1,
         "title":"Here Comes The Sun",
         "artist":"The Beatles",
         "album":"Abbey Road",
         "duration":185,
         "coverArt":"images/album1.jpeg",
+        "altText":"Here Comes The Sun by The Beatles from Abbey Road album",
         "language": "English"
     },
     {
+        "id":2,
         "title":"花",
         "artist":"Fujii Kaze",
         "album":"Hana",
         "duration":246,
         "coverArt":"images/album2.jpeg",
+        "altText":"Hana by Fujii Kaze from Hana album",
         "language": "Japanese"
     },
     {
+        "id":3,
         "title":"Jarim",
         "artist":"Misty Terrace, Akira Nair",
         "album":"Jarim",
         "duration":193,
         "coverArt":"images/album3.jpeg",
+        "altText":"Jarim by Misty Terrace, Akira Nair from Jarim album",
         "language": "Dzongkha"
     },
     {
+        "id":4,
         "title":"có hẹn với thanh xuân",
         "artist":"MONSTAR, GREY D",
         "album":"Over The Moon",
         "duration":218,
         "coverArt":"images/album4.jpeg",
+        "altText":"co hen voi thanh xuan by MONSTAR, GREY D from Over The Moon album",
         "language": "Vietnamese"
     },
     {
+        "id":5,
         "title":"Life Goes On",
         "artist":"BTS",
         "album":"BE",
         "duration":207,
         "coverArt":"images/album5.jpeg",
+        "altText":"Life Goes On by BTS from BE album",
         "language": "Korean"
     },
     {
+        "id":6,
         "title":"Mahiye Jinna Sohna",
         "artist":"Darshan Raval",
         "album":"Dard",
         "duration":181,
         "coverArt":"images/album6.jpeg",
+        "altText":"Mahiye Jinna Sohna by Darshan Raval from Dard album",
         "language": "Hindi"
     },
     {
+        "id":7,
         "title":"Lemon",
         "artist":"Kenshi Yonezu",
         "album":"STRAY SHEEP",
         "duration":256,
         "coverArt":"images/album7.jpeg",
+        "altText":"Lemon by Kenshi Yonezu from STRAY SHEEP Album",
         "language": "Japanese"
     },
     {
+        "id":8,
         "title":"LILAC",
         "artist":"IU",
         "album":"LILAC",
         "duration":215,
         "coverArt":"images/album8.jpeg",
+        "altText":"LILAC by IU from LILAC Album",
         "language": "Korean"
     },
     {
+        "id":9,
         "title":"さくら",
         "artist":"Naotoro Moriyama",
         "album":"傑作選　2001-2005",
         "duration":256,
         "coverArt":"images/album9.jpeg",
+        "altText":"Sakura by Naotoro Moriyama from kessakusen 2001-2005 album",
         "language": "Japanese"
     },
     {
+        "id":10,
         "title":"ưng quá chừng",
         "artist":"AMEE",
         "album":"ưng quá chừng",
         "duration":81,
         "coverArt":"images/album10.jpeg",
+        "altText":"ung qua chung by AMEE from ung qua chung album",
         "language": "Vietnamese"
     },
     {
+        "id":11,
         "title":"Light Switch",
         "artist":"Charlie Puth",
         "album":"CHARLIE",
         "duration":188,
         "coverArt":"images/album11.jpeg",
+        "altText":"Light Switch by Charlie Puth from CHARLIE album",
         "language": "English"
     },
     {
+        "id":12,
         "title":"Choo Lo",
         "artist":"The Local Train",
         "album":"Aalas Ka Pedh",
         "duration":234,
         "coverArt":"images/album12.jpeg",
+        "altText":"Choo Lo by The Local Train from Aalas Ka Pedh album",
         "language": "Hindi"
     }
 ]
