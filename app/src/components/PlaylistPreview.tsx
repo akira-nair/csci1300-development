@@ -1,4 +1,4 @@
-import { Box, Divider, Heading, Text } from "@chakra-ui/react";
+import { Box, Button, Divider, Heading, Text } from "@chakra-ui/react";
 import { Song } from "../App";
 import { time } from "console";
 import { TimeToText } from "./SongCard";
@@ -25,6 +25,7 @@ function PlaylistPreview(props: {songs: Song[], time: number}){
            {props.songs.map((item, index) => (
                 <PlaylistSong song={item}/>
            ))}
+           
            
         </Box>
 
